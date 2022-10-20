@@ -1,15 +1,21 @@
-# (Application Name)
+# Currency Exchange
 
 #### (Brief Description of Application)
 
-#### By (Your Name Here)
+#### By Grace Lee
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _Javascript_
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _ExchangeRate-API_
+* _ESLint_
+* _Webpack_
+* _Babel_
+* _Nodejs_
+* _NPM_
 
 ## Description
 
