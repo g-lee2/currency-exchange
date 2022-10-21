@@ -3,13 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Exchange from './js/exchange.js';
 
-function displayApiData(codeCountry1, codeCountry2, exchangeAmount) {
-  let exchangeRateResult = Exchange.getExchangeRate(codeCountry1, codeCountry2, exchangeAmount);
-  //let conversionRate = exchangeRateResult.conversion_rate;
-  console.log(exchangeRateResult);
-  //let conversionResult = exchangeRateResult.conversion_result;
-  //document.getElementById("rate-conversion").innerHTML = conversionRate;
-  //document.getElementById("rate").innerHTML = conversionResult;
+function getApiData(codeCountry1, codeCountry2, exchangeAmount) {
+  let promise = Exchange.getExchangeRate(codeCountry1, codeCountry2, exchangeAmount);
+  promise.then(function(array) {
+    printElements(array);
+  }, function(errorArray) {
+    printError(errorArray);
+  });
+}
+
+function printElements(data) {
+  document.getElementById('rate-conversion').innerHTML = data.conversion_rate;
+  document.getElementById('rate').innerHTML = data.conversion_result;
+}
+
+function printError(error) {
+  document.getElementById('error-message').innerHTML = `${error}.`;
 }
 
 function displayData(event) {
@@ -23,7 +32,7 @@ function displayData(event) {
   document.getElementById("code1").innerHTML = country1;
   document.getElementById("code2").innerHTML = country2;
   document.getElementById("input-amount").innerHTML = currencyAmount;
-  displayApiData(country1, country2, currencyAmount);
+  getApiData(country1, country2, currencyAmount);
 }
 
 
