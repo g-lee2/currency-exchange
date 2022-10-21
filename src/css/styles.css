@@ -1,5 +1,6 @@
 body {
-  background: #F8F8FF;
+  font-family: 'Bree Serif', serif;
+  background-image: linear-gradient(#191970 50%, white 50%);
 }
 
 .container {
@@ -35,7 +36,8 @@ button {
   background: #F8F8FF;
 }
 
-.jumbotron {
+.header {
   text-align: center;
-  background: #D8BFD8;
+  padding: 5%;
+  color: white;
 }
