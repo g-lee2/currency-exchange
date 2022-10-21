@@ -13,8 +13,8 @@ function getApiData(codeCountry1, codeCountry2, exchangeAmount) {
 }
 
 function printElements(data) {
-  document.getElementById('rate-conversion').innerHTML = data.conversion_rate;
-  document.getElementById('rate').innerHTML = data.conversion_result;
+  document.getElementById('rate-conversion').innerHTML = data.conversion_rate.toFixed(2);
+  document.getElementById('rate').innerHTML = data.conversion_result.toFixed(2);
 }
 
 function printError(error) {
