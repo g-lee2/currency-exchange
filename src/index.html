@@ -4,50 +4,54 @@
   <title>Currency Exchange</title>
 </head>
 <body>
-  <form>
-    <h1>Country 1</h1>
-    <select id="firstCountry">
-      <option>Select One</option>
-      <option value="USD">United States Dollar</option>
-      <option value="KRW">South Korean Won</option>
-      <option value="JPY">Japanese Yen</option>
-      <option value="CAD">Canadian Dollar</option>
-      <option value="GBP">United Kingdom Pound Sterling</option>
-      <option value="HKD">Hong Kong Dollar</option>
-      <option value="PHP">Philippine Peso</option>
-      <option value="EUR">European Union Euro</option>
-      <option value="VND">Vietnamese Đồng</option>
-      <option value="TWD">New Taiwan Dollar</option>
-      <option value="TRY">Turkey Lira</option>
-      <option value="INR">India Rupee</option><hr>
-    </select>
-    <h1>Country 2</h1>
-    <select id="secondCountry">
-      <option>Select One</option>
-      <option value="USD">United States Dollar</option>
-      <option value="KRW">South Korean Won</option>
-      <option value="JPY">Japanese Yen</option>
-      <option value="CAD">Canadian Dollar</option>
-      <option value="GBP">United Kingdom Pound Sterling</option>
-      <option value="HKD">Hong Kong Dollar</option>
-      <option value="PHP">Philippine Peso</option>
-      <option value="EUR">European Union Euro</option>
-      <option value="VND">Vietnamese Đồng</option>
-      <option value="TWD">New Taiwan Dollar</option>
-      <option value="TRY">Turkey Lira</option>
-      <option value="INR">India Rupee</option><hr>
-    </select>
-    <h1>Enter amount</h1>
-    <label for="amount-input">Enter currency amount</label>
-    <input id="amount-input" type="number" name="amount-input">
-    <button type="submit">Get Rates!</button>
-  </form>
-  <h1>Exchange Rate: </h1>
-  <span id="code1"></span><br>
-  <span id="code2"></span><br>
-  <span id="input-amount"></span><br>
-  <span id="rate-conversion"></span><br>
-  <span id="rate"></span>
-  <span id="error-message"></span>
+  <div class="jumbotron">
+    <h1>Currency Exchange</h1>
+  </div>
+  <div class="container">
+    <form>
+      <h1>Enter amount</h1>
+      <label for="amount-input"></label>
+      <input id="amount-input" type="number" name="amount-input">
+      <h1>From</h1>
+      <select id="firstCountry">
+        <option>Select One</option>
+        <option value="USD">United States Dollar</option>
+        <option value="KRW">South Korean Won</option>
+        <option value="JPY">Japanese Yen</option>
+        <option value="CAD">Canadian Dollar</option>
+        <option value="GBP">United Kingdom Pound Sterling</option>
+        <option value="HKD">Hong Kong Dollar</option>
+        <option value="PHP">Philippine Peso</option>
+        <option value="EUR">European Union Euro</option>
+        <option value="VND">Vietnamese Đồng</option>
+        <option value="TWD">New Taiwan Dollar</option>
+        <option value="TRY">Turkey Lira</option>
+        <option value="INR">India Rupee</option>
+      </select>
+      <h1>To</h1>
+      <select id="secondCountry">
+        <option>Select One</option>
+        <option value="USD">United States Dollar</option>
+        <option value="KRW">South Korean Won</option>
+        <option value="JPY">Japanese Yen</option>
+        <option value="CAD">Canadian Dollar</option>
+        <option value="GBP">United Kingdom Pound Sterling</option>
+        <option value="HKD">Hong Kong Dollar</option>
+        <option value="PHP">Philippine Peso</option>
+        <option value="EUR">European Union Euro</option>
+        <option value="VND">Vietnamese Đồng</option>
+        <option value="TWD">New Taiwan Dollar</option>
+        <option value="TRY">Turkey Lira</option>
+        <option value="INR">India Rupee</option>
+      </select><br><br>
+      <button type="submit">Get Rates!</button><br><br>
+      <h1>Exchange Rate: </h1>
+      <span id="code1"></span><br>
+      <span id="code2"></span><br>
+      <span id="input-amount"></span><br>
+      <span id="rate-conversion"></span><br>
+      <span id="rate"></span>
+    </form>
+  </div>
 </body>
 </html>
