@@ -1,3 +1,41 @@
 body {
-  background-color: lightblue;
+  background: #F8F8FF;
+}
+
+.container {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: 50rem;
+  width: 50rem;
+  padding: 14%;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 50px 30px 30px rgba(0, 0, 0, 0.06);
+}
+
+form input {
+  height: 50px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: #F8F8FF;
+}
+
+form select {
+  height: 50px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: #F8F8FF;
+}
+
+button {
+  border-radius: 10px;
+  background: #F8F8FF;
+}
+
+.jumbotron {
+  text-align: center;
+  background: #D8BFD8;
 }
