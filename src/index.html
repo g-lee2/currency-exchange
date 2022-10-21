@@ -6,7 +6,7 @@
 <body>
   <form>
     <h1>Country 1</h1>
-    <select>
+    <select id="firstCountry">
       <option>Select One</option>
       <option value="USD">United States Dollar</option>
       <option value="KRW">South Korean Won</option>
@@ -22,7 +22,7 @@
       <option value="INR">India Rupee</option><hr>
     </select>
     <h1>Country 2</h1>
-    <select>
+    <select id="secondCountry">
       <option>Select One</option>
       <option value="USD">United States Dollar</option>
       <option value="KRW">South Korean Won</option>
@@ -42,5 +42,11 @@
     <input id="amount-input" type="number" name="amount-input">
     <button type="submit">Get Rates!</button>
   </form>
+  <h1>Exchange Rate: </h1>
+  <span id="code1"></span><br>
+  <span id="code2"></span><br>
+  <span id="input-amount"></span><br>
+  <span id="rate-conversion"></span><br>
+  <span id="rate"></span>
 </body>
 </html>
