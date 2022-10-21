@@ -18,7 +18,7 @@ function printElements(data) {
 }
 
 function printError(error) {
-  document.getElementById('error-message').innerHTML = `${error}.`;
+  document.getElementById('error-message').innerHTML = alert('Something went wrong!');
 }
 
 function displayData(event) {

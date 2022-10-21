@@ -8,7 +8,7 @@ export default class Exchange {
         if (this.status === 200) {
           resolve(response);
         } else {
-          reject([this, response]);
+          reject(response.status);
         }
       });
       request.open("GET", url, true);
