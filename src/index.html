@@ -44,12 +44,11 @@
         <option value="INR">India Rupee</option>
       </select><br><br>
       <button type="submit">Get Rates!</button><br><br>
-      <h1>Exchange Rate: </h1>
-      <span id="code1"></span><br>
-      <span id="code2"></span><br>
-      <span id="input-amount"></span><br>
-      <span id="rate-conversion"></span><br>
-      <span id="rate"></span>
+      <div id="result" class="hidden">
+        <h1>Exchange Rate: </h1>
+        <p><span id="input-amount"></span><span id="code1"></span> = <span id="rate"></span><span id="code2"></span></p>
+        <p>1<span id="code1"></span> = <span id="rate-conversion"></span><span id="code2"></span></p>
+      </div>
     </form>
   </div>
 </body>
