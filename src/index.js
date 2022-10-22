@@ -6,7 +6,7 @@ import Exchange from './js/exchange.js';
 function getApiData(codeCountry1, codeCountry2, exchangeAmount) {
   Exchange.getExchangeRate(codeCountry1, codeCountry2, exchangeAmount)
     .then(function(response) {
-      if (response.main) {
+      if (response.result == 'success') {
         printElements(response);
       } else {
         printError(response);
@@ -15,14 +15,16 @@ function getApiData(codeCountry1, codeCountry2, exchangeAmount) {
 }
 
 function printElements(data) {
+  document.getElementById('error-result').setAttribute('class', 'hidden2');
   document.getElementById('rate-conversion').innerHTML = data.conversion_rate.toFixed(2);
   document.getElementById('rate').innerHTML = data.conversion_result.toFixed(2);
 }
 
 function printError(error) {
   document.getElementById('result').setAttribute('class', 'hidden');
-  if (error.toString().includes('TypeError')) {
-    document.getElementById('error').innerHTML = `${error}! The currency you selected is not supported! Please make sure to make two different selections from the drop down menu!`;
+  document.getElementById('error-result').removeAttribute('class');
+  if (error.toString().includes('404')) {
+    document.getElementById('error').innerHTML = `${error}! The currency you selected is not supported! Please check your selections from the drop down menu!`;
   } else {
     document.getElementById('error').innerHTML = `${error}! There was a problem!`;
   }
