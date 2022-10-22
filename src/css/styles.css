@@ -2,9 +2,14 @@ body {
   font-family: 'Bree Serif', serif;
   display: grid;
   background: black;
+  margin: 5%;
 }
 
 .hidden {
+  display: none;
+}
+
+.hidden2 {
   display: none;
 }
 
@@ -18,7 +23,6 @@ body {
   margin: auto;
   border-radius: 20px;
   background: white;
-  box-shadow: 20px 20px 50px gray;
 }
 
 form input {
@@ -27,6 +31,7 @@ form input {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background: #F8F8FF;
+  text-align: center;
 }
 
 form select {
@@ -35,6 +40,7 @@ form select {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background: #F8F8FF;
+  text-align: center;
 }
 
 button {
@@ -53,4 +59,8 @@ button:hover {
   padding: 5%;
   color: white;
   font-size: 500%;
+}
+
+p {
+  font-size: 200%
 }
