@@ -2,7 +2,7 @@
 
 #### By _**Grace Lee**_
 
-#### _A simple website that allows user to see currency exchange rates between two countries._
+#### _A simple website that allows user to see currency exchange rates and currency conversions between two currencies._
 
 ## Technologies Used
 
@@ -16,7 +16,7 @@
 
 ## Description
 
-_It is a website where a user chooses two currencies and enter the amound they want converted. The second country's currency is the target currency or the currency the amount the user enters will be converted to. For example, if the user chooses US Dollar and Japanese Yen, and enters the amount 1, then the user will see how much Japanese Yen $1 is equivalent to under the current exchange rate. The user will be able to see the currency rate, as well as the currency conversion result when they input the relevant information_
+_It is a website where a user enters an amount in one currency and then chooses another currency to see the exchange rate and the total amount they entered in converted currency. For example, if a user enters and chooses 10 USD, and as the target currency chooses Japanese Yen, they will see how much 1 USD equals in Japanese Yen as well as how much 10 USD equals in Japanese Yen._
 
 ## Setup/Installation Requirements
 1. Clone the repository: '[https://github.com/g-lee2/currency-exchange.git]' to your desktop.
@@ -28,14 +28,14 @@ _It is a website where a user chooses two currencies and enter the amound they w
 - Optionally, run the command "npm run build" to bundle the files
 5. To create an API key:
 - Navigate to '[https://www.exchangerate-api.com/]' in your browser
-- Enter your email and press the 'Get Free Key!' button 
-- Fill in your address and relevant information to create an account
+- Enter your email and click the 'Get Free Key!' button 
+- You will be prompted to create an account. Please fill in your address, name, email, and any other relevant information to create an account
 - Once you create your account, activate your account through the link sent to the email you registered your account with 
+- After activation, you should be able to access a dashboard that includes your API key 
 6. Protect your API key 
-- Then open the .gitignore file in your '[currency-exchange]' directory, type and add a .env file 
+- Create a .env file by running the command "touch .env" in your command line and add it to your .gitignore file in your '[currency-exchange]' directory
 - Push this file to your GitHub by running the commands "git add .gitignore", "git commit -m "Update .gitignore file", and finally "git push origin main" in your command line
-- Then create a .env file in the root directory by running the command "touch .env" in your command line
-- Then store and add your API key in the .env file under the variable name API_KEY in your .env file
+- Then store and add your API key in the .env file at the top level of your '[currency-exchange]' directory under the variable name API_KEY in your .env file
 (ex. API_KEY=3d68a17ddd5ea407ab91f2d278342017, you should add your API key after the equal sign as the one in the example is a fake one)
 7. Configure Webpack
 - Run the command "npm install dotenv-webpack@2.0.0 --save-dev" in your command line
