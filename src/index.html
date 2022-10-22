@@ -13,7 +13,7 @@
       <input id="amount-input" type="number" name="amount-input">
       <h1>From</h1>
       <select id="firstCountry">
-        <option>Select One</option>
+        <option value="RRR">Select One</option>
         <option value="USD">United States Dollar</option>
         <option value="KRW">South Korean Won</option>
         <option value="JPY">Japanese Yen</option>
@@ -29,7 +29,7 @@
       </select>
       <h1>To</h1>
       <select id="secondCountry">
-        <option>Select One</option>
+        <option value="RRR">Select One</option>
         <option value="USD">United States Dollar</option>
         <option value="KRW">South Korean Won</option>
         <option value="JPY">Japanese Yen</option>
@@ -44,10 +44,13 @@
         <option value="INR">India Rupee</option>
       </select><br><br>
       <button type="submit">Get Rates!</button><br><br>
+      <div id="error-result" class="hidden2">
+        <p><span id="error"></span></p>
+      </div>
       <div id="result" class="hidden">
-        <h1>Exchange Rate: </h1>
-        <p><span id="input-amount"></span><span id="code1"></span> = <span id="rate"></span><span id="code2"></span></p>
-        <p>1<span id="code1"></span> = <span id="rate-conversion"></span><span id="code2"></span></p>
+        <h1>Exchange Rate:</h1><br><br>
+        <p><span id="input-amount"></span> <span id="code1"></span> = <span id="rate"></span> <span id="code2"></span></p>
+        <p>1 <span id="code1Again"></span> = <span id="rate-conversion"> </span> <span id="code2Again"></span></p>
       </div>
     </form>
   </div>
