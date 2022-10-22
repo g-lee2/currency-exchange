@@ -1,19 +1,17 @@
 export default class Exchange {  
   static getExchangeRate(currencyCode1, currencyCode2, amount) {
-    return new Promise(function(resolve, reject) {
-      let request = new XMLHttpRequest(); 
-      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${currencyCode1}/${currencyCode2}/${amount}`;
-      request.addEventListener("loadend", function() {
-        const response = JSON.parse(this.responseText)
-        if (this.status === 200) {
-          resolve(response);
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${currencyCode1}/${currencyCode2}/${amount}`)
+      .then(function(response) {
+        if (!response.ok) {
+          const errorMessage = `${response.status} ${response.statusText}`;
+          throw new Error(errorMessage);
         } else {
-          reject(response.status);
+          return response.json();
         }
+      }) 
+      .catch(function(error) {
+        return error;
       });
-      request.open("GET", url, true);
-      request.send();
-    });
   }
 }
   
